@@ -1,0 +1,51 @@
+GET http://localhost:3000/user/
+
+###
+GET http://localhost:3000/user/67b05011b0f04611d68fac15
+
+###
+POST http://localhost:3000/user/
+Content-Type: application/json
+
+{
+    "first_name": "fnu from node",
+    "last_name": "lnu from node",
+    "creation_date": "2024-11-13T16:00:00.000Z",
+    "email_id": "node@email.com",
+    "phone_number": "(999) 999-9999",
+    "password": "password"
+}
+
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email_id": "node@email.com",
+    "password": "password"
+}
+
+###
+GET http://localhost:3000/menuitems/
+
+###
+POST http://localhost:3000/orders/
+Content-Type: application/json
+
+{
+  "subtotal": 100,
+  "service_fee": 5,
+  "tax": 8,
+  "total_amount": 113,
+  "address": 123,
+  "phone_number": 9876543210,
+  "order_date": "2024-02-12T12:00:00Z",
+  "customer_name": "John Doe",
+  "cart_summary": [
+    { "item": "Pizza", "quantity": 2, "amount": 20 },
+    { "item": "Pasta", "quantity": 1, "amount": 15 }
+  ]
+}
+
+###
+GET http://localhost:3000/orders/67b05092b0f04611d68fac5c
